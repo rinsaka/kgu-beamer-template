@@ -1,0 +1,31 @@
+% Copyright 2007 by Till Tantau
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+%
+% See the file doc/licenses/LICENSE for more details.
+
+\mode<presentation>
+
+\useoutertheme{kgu}
+\useinnertheme[shadow=true]{rounded} % 箇条書き等
+\usecolortheme{orchid} % block に色付け
+\usecolortheme{kgu} % Kobe Gakuin University Colors
+\usefonttheme{structurebold} % タイトルを太字にする
+% \setbeamerfont{title}{size=\Large,parent=structure}
+
+\setbeamerfont{block title}{size={}}
+
+\addtobeamertemplate{frametitle}{\vspace{1.0em}}{}  %タイトルを少し下げて，ロゴのスペースを作成
+
+% フォント
+\newcommand{\bgoth}{\usefont{T1}{phv}{b}{n} \usekanji{JY1}{hgt}{bx}{n}}
+\newcommand{\minc}{\usefont{OT1}{cmr}{m}{n} \usekanji{JY1}{hmc}{m}{n}}
+
+% 表の太罫線
+\def\Hline{\noalign{\hrule height 0.5truemm}}
+
+\mode
+<all>

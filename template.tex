@@ -1,0 +1,72 @@
+\documentclass[12pt,dvipdfmx]{beamer}
+% \documentclass[12pt,dvipdfmx,aspectratio=169]{beamer}
+
+%
+%  タイプセットコマンド
+%    ptex2pdf -l -ot "-synctex=1 -file-line-error" template.tex
+%
+\usetheme{KGU}
+
+\setbeamertemplate{navigation symbols}{} %% 右下のアイコンを消す
+\usefonttheme[onlymath]{serif}
+
+\usepackage{graphicx}% 画像
+\usepackage{pxjahyper}% しおりの文字化け防止
+\usepackage[deluxe]{otf} %これを入れないとすべてが太字になってしまう
+
+\renewcommand{\kanjifamilydefault}{\gtdefault}% 日本語フォントをゴシックに
+
+\setbeamertemplate{theorems}[numbered]  %% 定理に番号をつける
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{proposition}[thm]{Proposition}
+\theoremstyle{example}
+\newtheorem{exam}[thm]{Example}
+\newtheorem{remark}[thm]{Remark}
+\newtheorem{question}[thm]{Question}
+\newtheorem{prob}[thm]{Problem}
+
+
+% フッター (4:3)
+\setbeamertemplate{footline}
+{\color{gray} %
+\hspace{6cm}
+【無断転載厳禁】
+\hspace{0.8cm}
+経営学部　林坂 弘一郎
+\hspace{0.8cm}
+\insertframenumber{} / \inserttotalframenumber%
+}
+
+% % フッター (16:9)
+% \setbeamertemplate{footline}
+% {\color{gray} %
+% \hspace{7cm}
+% 【無断転載厳禁】
+% \hspace{3cm}
+% 経営学部　林坂 弘一郎
+% \hspace{1cm}
+% \insertframenumber{} / \inserttotalframenumber%
+% }
+
+
+% 背景を指定する（4:3 か 16:9 で選択する）
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{kgu-bg43.pdf}}
+% \usebackgroundtemplate{\includegraphics[width=\paperwidth]{kgu-bg169.pdf}}
+
+
+\title{タイトル}
+\subtitle{サブタイトル}
+\author{林坂弘一郎}
+\date{2021年度}
+\institute[神戸学院大学]{神戸学院大学 経営学部}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\frame{\titlepage}
+\section[Outline]{}
+\frame{\tableofcontents}
+% \input{slide_sample_all}
+
+\end{document}

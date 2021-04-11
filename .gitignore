@@ -1,0 +1,9 @@
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.gz
+*.toc
+template.pdf
+slide_sample_all.tex
