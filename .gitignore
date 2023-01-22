@@ -6,4 +6,4 @@
 *.gz
 *.toc
 template.pdf
-slide_sample_all.tex
+.DS_Store

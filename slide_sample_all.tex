@@ -1,0 +1,292 @@
+\section{はじめに}
+
+\begin{frame}{はじめに}
+  \begin{itemize}
+    \item Beamer のサンプルです
+  \end{itemize}
+\end{frame}
+
+\section{箇条書き}
+
+\begin{frame}{箇条書き}
+  \begin{itemize}
+    \item 番号なしの箇条書きです
+    \item 番号なしの箇条書きです
+    \item 番号なしの箇条書きです
+    \item 番号なしの箇条書きです
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{番号付き箇条書き}
+  \begin{enumerate}
+    \item 番号付きの箇条書きです
+    \item 番号付きの箇条書きです
+    \item 番号付きの箇条書きです
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{箇条書きのレベル}
+  \begin{itemize}
+    \item 箇条書きのレベル1です
+    \begin{itemize}
+      \item 箇条書きのレベル2です
+      \begin{itemize}
+        \item 箇条書きのレベル3です
+        \item 箇条書きのレベル4はエラーになりそうです
+      \end{itemize}
+      \item 箇条書きのレベル2です
+      \item 箇条書きのレベル2です
+    \end{itemize}
+    \item 箇条書きのレベル1です
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{箇条書きのレベル}
+  \begin{enumerate}
+    \item 箇条書きのレベル1です
+    \begin{enumerate}
+      \item 箇条書きのレベル2です
+      \begin{enumerate}
+        \item 箇条書きのレベル3です
+        \item 箇条書きのレベル4はエラーになりそうです
+      \end{enumerate}
+      \item 箇条書きのレベル2です
+      \item 箇条書きのレベル2です
+    \end{enumerate}
+    \item 箇条書きのレベル1です
+  \end{enumerate}
+\end{frame}
+
+
+\section{ブロック}
+
+\begin{frame}{ブロック (block)}
+  \begin{block}{ブロック}
+    \begin{itemize}
+      \item ブロック(block)環境を使ってみます．
+      \item ブロック(block)環境を使ってみます．
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{警告ブロック (alertblock)}
+  \begin{alertblock}{警告ブロック}
+    \begin{itemize}
+      \item 警告ブロック(alertblock)環境を使ってみます．
+      \item 警告ブロック(alertblock)環境を使ってみます．
+    \end{itemize}
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{定理 (thm)}
+  \begin{thm}
+    \begin{itemize}
+      \item 定理(thm)環境を使ってみます．
+      \item 定理(thm)環境を使ってみます．
+      \item 定理(thm)環境を使ってみます．
+      \item 定理(thm)環境を使ってみます．
+    \end{itemize}
+  \end{thm}
+  \begin{proof}
+    証明はproof環境です．証明はproof環境です．証明はproof環境です．証明はproof環境です．証明はproof環境です．証明はproof環境です．自動的に証明おわりの記号が右端に出力されます．
+  \end{proof}
+\end{frame}
+
+\begin{frame}{命題 (proposition)}
+  \begin{proposition}
+    \begin{itemize}
+      \item 命題(proposition)環境を使ってみます．
+      \item 命題(proposition)環境を使ってみます．
+      \item 命題(proposition)環境を使ってみます．
+      \item 命題(proposition)環境を使ってみます．
+    \end{itemize}
+  \end{proposition}
+\end{frame}
+
+\begin{frame}{例題 (exam)}
+  \begin{exam}
+    \begin{itemize}
+      \item 例題(exam)環境を使ってみます．
+      \item 通常のブロック要素と色が異なることに注意してください．
+    \end{itemize}
+  \end{exam}
+\end{frame}
+
+\begin{frame}{注 (remark)}
+  \begin{remark}
+    \begin{itemize}
+      \item 注(remark)環境を使ってみます．
+      \item 通常のブロック要素と色が異なることに注意してください．
+    \end{itemize}
+  \end{remark}
+\end{frame}
+
+\begin{frame}{問題 (question)}
+  \begin{question}
+    \begin{itemize}
+      \item 問題(question)環境を使ってみます．
+      \item 通常のブロック要素と色が異なることに注意してください．
+    \end{itemize}
+  \end{question}
+\end{frame}
+
+\begin{frame}{問題 (prob)}
+  \begin{prob}{問題}
+    \begin{itemize}
+      \item 問題(prob)環境を使ってみます．
+      \item 通常のブロック要素と色が異なることに注意してください．
+    \end{itemize}
+  \end{prob}
+\end{frame}
+
+\begin{frame}{問題 (prob)}
+  \begin{prob}
+    \begin{itemize}
+      \item 問題(prob)環境を使ってみます．
+      \item 通常のブロック要素と色が異なることに注意してください．
+    \end{itemize}
+  \end{prob}
+\end{frame}
+
+\section{数式，図，表}
+
+\begin{frame}{数式}
+  \begin{itemize}
+    \item 数式$F(x)$は\LaTeX~の書き方がほぼ使えるはず
+    \begin{equation}
+      F(x) = \int_{0}^{x}f(t)dt
+    \end{equation}
+    \item 数式番号が不要であれば
+    \begin{equation*}
+      F(x) = \int_{0}^{x}f(t)dt
+    \end{equation*}
+    \item 複数行の数式ももちろん可能
+    \begin{eqnarray*}
+      F(x) &=& \int_{0}^{x}f(t)dt \\
+      &=& 1 - e^{-\lambda x}
+    \end{eqnarray*}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{画像（PDF形式）の読み込み}
+  \begin{figure}
+    \includegraphics[width=70mm]{figs/nn.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{画像（PNG形式）の読み込み}
+  \begin{figure}
+    \includegraphics[width=60mm]{figs/tegaki-0-01-rgba.png}
+  \end{figure}
+\end{frame}
+
+
+\begin{frame}{表}
+  \begin{center}
+    \begin{tabular}{clr}
+      \Hline
+      \multicolumn{1}{c}{中央揃え} &
+      \multicolumn{1}{c}{左揃え} &
+      \multicolumn{1}{c}{右揃え} \\ \Hline
+      2018 & AAAAA & 22222 \\ \hline
+      2019 & AA & 2222 \\ \hline
+      2020 & AAAAA & 22 \\ \hline
+      2021 & AAAAAAAAAA & 222 \\ \hline
+      2022 & A & 2 \\ \Hline
+    \end{tabular}
+  \end{center}
+\end{frame}
+
+\section{フォント，色の指定，その他スタイルの指定とアニメーション}
+
+\subsection{フォントと色}
+
+\begin{frame}{フォントや色を指定する}
+  \begin{itemize}
+    \item 通常のフォントはゴシック(Gothic 01234)です．
+    \item {\minc かな文字を明朝体(minc 01234)に変更できます．}
+    \item {\bgoth 太字のゴシック体です．}
+    \item {\rm Roman }
+    \item {\color{blue}色を変更します．}
+    \item {\color{blue}\bgoth 色と書体を変更します．}
+  \end{itemize}
+\end{frame}
+
+\subsection{背景の変更}
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{kgu-bg169ruled.pdf}}
+\begin{frame}{背景を変更}
+  \begin{itemize}
+    \item このページだけ背景を変更します
+  \end{itemize}
+\end{frame}
+}
+
+\subsection{配置の変更}
+
+\begin{frame}[t]{箇条書きの配置をページの上部に}
+  \begin{itemize}
+    \item t オプションを指定すると箇条書きが上部に配置される
+    \item t オプションを指定すると箇条書きが上部に配置される
+  \end{itemize}
+\end{frame}
+
+\subsection{段組}
+
+\begin{frame}{2段組み}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item 2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item 2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{2段組み（比率の変更と上部配置）}
+  \begin{columns}[t]
+    \begin{column}{0.3\textwidth}
+      \begin{itemize}
+        \item 2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.7\textwidth}
+      \begin{itemize}
+        \item 2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．2段組みです．
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\subsection{アニメーション}
+
+\begin{frame}{アニメーション}
+  \begin{itemize}
+    \item アニメーションを使います．
+    \pause
+    \item 2つ目の項目です．
+    \item ページ番号は変化しないことに注意してください．
+    \pause
+    \item 3つ目の項目です．
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{アニメーション（順序の指定）}
+  \begin{itemize}
+    \item<1-> アニメーションを使います．
+    \item<3-> 2つ目の項目です．
+    \item<2-> 3つ目の項目です．
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{おわり}
+  \begin{itemize}
+    \item 以上Beamerのサンプルでした
+  \end{itemize}
+\end{frame}

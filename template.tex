@@ -54,11 +54,17 @@
 % \usebackgroundtemplate{\includegraphics[width=\paperwidth]{kgu-bg43.pdf}}
 \usebackgroundtemplate{\includegraphics[width=\paperwidth]{kgu-bg169.pdf}}
 
+% セクションごとに目次を作る
+\AtBeginSection[]{
+    \begin{frame}
+        \tableofcontents[currentsection]
+    \end{frame}
+}
 
 \title{タイトル}
 \subtitle{サブタイトル}
 \author{林坂弘一郎}
-\date{2022年度}
+\date{2023年度}
 \institute[神戸学院大学]{神戸学院大学 経営学部}
 
 
@@ -68,6 +74,6 @@
 \frame{\titlepage}
 \section[Outline]{}
 \frame{\tableofcontents}
-% \input{slide_sample_all}
+\input{slide_sample_all}
 
 \end{document}
