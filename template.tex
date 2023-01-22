@@ -9,6 +9,7 @@
 
 \setbeamertemplate{navigation symbols}{} %% 右下のアイコンを消す
 \usefonttheme[onlymath]{serif}
+% \usefonttheme{professionalfonts}
 
 \usepackage{graphicx}% 画像
 \usepackage{pxjahyper}% しおりの文字化け防止
@@ -16,6 +17,9 @@
 \usepackage{courier} %texttt で courier フォントが使える
 
 \renewcommand{\kanjifamilydefault}{\gtdefault}% 日本語フォントをゴシックに
+\renewcommand{\familydefault}{\sfdefault} % 本文の欧文フォントをゴシックに
+
+% \renewcommand{\familydefault}{\gtdefault} % 本文の欧文フォントをセリフ体に
 
 \setbeamertemplate{theorems}[numbered]  %% 定理に番号をつける
 \newtheorem{thm}{Theorem}[section]
