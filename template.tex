@@ -56,12 +56,19 @@
 
 % セクションごとに目次を作る
 \AtBeginSection[]{
-    \begin{frame}
-        \tableofcontents[currentsection]
-    \end{frame}
+  \begin{frame}
+    \tableofcontents[currentsection]
+  \end{frame}
 }
 
-\title{タイトル}
+% サブセクションごとに目次を作る
+\AtBeginSubsection[]{
+  \begin{frame}
+    \tableofcontents[currentsubsection]
+  \end{frame}
+}
+
+\title{Beamerプレゼンテーションサンプル}
 \subtitle{サブタイトル}
 \author{林坂弘一郎}
 \date{2023年度}
