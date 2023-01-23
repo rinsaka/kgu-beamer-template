@@ -32,7 +32,6 @@
       \item 箇条書きのレベル2です
       \begin{itemize}
         \item 箇条書きのレベル3です
-        \item 箇条書きのレベル4はエラーになりそうです
       \end{itemize}
       \item 箇条書きのレベル2です
       \item 箇条書きのレベル2です
@@ -49,7 +48,6 @@
       \item 箇条書きのレベル2です
       \begin{enumerate}
         \item 箇条書きのレベル3です
-        \item 箇条書きのレベル4はエラーになりそうです
       \end{enumerate}
       \item 箇条書きのレベル2です
       \item 箇条書きのレベル2です
@@ -61,30 +59,46 @@
 
 \section{ブロック}
 
-\begin{frame}{ブロック (block)}
-  \begin{block}{ブロック}
+\begin{frame}{いくつかのブロック}
+  \begin{block}{block}
     \begin{itemize}
-      \item ブロック(block)環境を使ってみます．
-      \item ブロック(block)環境を使ってみます．
+      \item block 環境を使ってみます．
     \end{itemize}
   \end{block}
-\end{frame}
-
-\begin{frame}{警告ブロック (alertblock)}
-  \begin{alertblock}{警告ブロック}
+  \begin{alertblock}{alertblock}
     \begin{itemize}
-      \item 警告ブロック(alertblock)環境を使ってみます．
-      \item 警告ブロック(alertblock)環境を使ってみます．
+      \item alertblock 環境を使ってみます．
     \end{itemize}
   \end{alertblock}
+  \begin{exampleblock}{exampleblock}
+    \begin{itemize}
+      \item exampleblock 環境を使ってみます．
+    \end{itemize}
+  \end{exampleblock}
 \end{frame}
 
-\begin{frame}{定理 (thm)}
+
+\begin{frame}{見出しのないブロック}
+  \begin{block}{}
+    \begin{itemize}
+      \item block 環境を使ってみます．
+    \end{itemize}
+  \end{block}
+  \begin{alertblock}{}
+    \begin{itemize}
+      \item alertblock 環境を使ってみます．
+    \end{itemize}
+  \end{alertblock}
+  \begin{exampleblock}{}
+    \begin{itemize}
+      \item exampleblock 環境を使ってみます．
+    \end{itemize}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{定理と証明(thm)}
   \begin{thm}
     \begin{itemize}
-      \item 定理(thm)環境を使ってみます．
-      \item 定理(thm)環境を使ってみます．
-      \item 定理(thm)環境を使ってみます．
       \item 定理(thm)環境を使ってみます．
     \end{itemize}
   \end{thm}
@@ -96,8 +110,6 @@
 \begin{frame}{命題 (proposition)}
   \begin{proposition}
     \begin{itemize}
-      \item 命題(proposition)環境を使ってみます．
-      \item 命題(proposition)環境を使ってみます．
       \item 命題(proposition)環境を使ってみます．
       \item 命題(proposition)環境を使ってみます．
     \end{itemize}
@@ -144,18 +156,18 @@
 
 \begin{frame}{数式}
   \begin{itemize}
-    \item 数式$F(x)$は\LaTeX~の書き方がほぼ使えるはず
+    \item 数式$F(t)$は\LaTeX~の書き方がほぼ使えるはず
     \begin{equation}
-      F(x) = \int_{0}^{x}f(t)dt
+      F(t) = \int_{0}^{t}f(x)dx
     \end{equation}
     \item 数式番号が不要であれば
     \begin{equation*}
-      F(x) = \int_{0}^{x}f(t)dt
+      F(s) = \int_{0}^{\infty}f(t)e^{-st}dt
     \end{equation*}
     \item 複数行の数式ももちろん可能
     \begin{eqnarray*}
-      F(x) &=& \int_{0}^{x}f(t)dt \\
-      &=& 1 - e^{-\lambda x}
+      F(t) &=& \int_{0}^{t}f(x)dx \\
+      &=& 1 - e^{-\lambda t}
     \end{eqnarray*}
   \end{itemize}
 \end{frame}
@@ -187,6 +199,7 @@
       2022 & A & 2 \\ \Hline
     \end{tabular}
   \end{center}
+  なお，横線は \texttt{\textbackslash hline} ですが，太線 \texttt{\textbackslash Hline} も定義しています．
 \end{frame}
 
 \section{フォント，色の指定，その他スタイルの指定とアニメーション}
@@ -198,8 +211,7 @@
     \item 通常のフォントはゴシック(Gothic 01234)です．
     \item {\bgoth 太字のゴシック体です．}
     \item {\minc かな文字を明朝体(minc 01234)に変更できます．}
-    \item {\rm Roman }
-    \item \texttt{texttt}
+    \item {\rm Roman}, \textit{textit}, \textsl{textsl}, \textsf{textsf}, \textrm{textrm}, \texttt{texttt}
     \item {\color{blue}色(blue)を変更します．}
     \item {\color{magenta}\bgoth 色(magenta)と書体を}{\color{red}\bgoth (red)変更します．}
     \item {\color{beamer@kgured}\bgoth beamer@kgured} と {\color{beamer@kgublue}\bgoth beamer@kgublue} を定義しています．{\color{beamer@kgublue}\bgoth beamer@kgublueはヘッダのロゴと同色です}
@@ -220,8 +232,8 @@
 
 \begin{frame}[t]{箇条書きの配置をページの上部に}
   \begin{itemize}
-    \item t オプションを指定すると箇条書きが上部に配置される
-    \item t オプションを指定すると箇条書きが上部に配置される
+    \item $[\mbox{t}]$ オプションを指定すると箇条書きが上部に配置される
+    \item $[\mbox{t}]$ オプションを指定すると箇条書きが上部に配置される
   \end{itemize}
 \end{frame}
 
@@ -276,6 +288,46 @@
     \item<3-> 2つ目の項目です．
     \item<2-> 3つ目の項目です．
   \end{itemize}
+\end{frame}
+
+\begin{frame}{表のアニメーション(1)}
+  \begin{itemize}
+    \item \texttt{\textbackslash pause}を使ったアニメーション
+  \end{itemize}
+  \begin{center}
+    \begin{tabular}
+      {clr}
+      \Hline
+      \multicolumn{1}{c}{中央揃え} &
+      \multicolumn{1}{c}{左揃え} &
+      \multicolumn{1}{c}{右揃え} \\ \Hline
+      2018 & AAAAAAAA & 22222222 \\ \hline \pause
+      2019 & AAAAAA & 222222 \\ \hline
+      2020 & AAAA & 2222 \\ \hline \pause
+      2021 & AA & 22 \\ \hline
+      2022 & A & 2 \\ \Hline
+    \end{tabular}
+  \end{center}
+\end{frame}
+
+\begin{frame}{表のアニメーション(2)}
+  \begin{itemize}
+    \item 順序のコントロール
+  \end{itemize}
+  \begin{center}
+    \begin{tabular}
+      {clr}
+      \Hline
+      \multicolumn{1}{c}{中央揃え} &
+      \multicolumn{1}{c}{左揃え} &
+      \multicolumn{1}{c}{右揃え} \\ \Hline
+      \onslide<4->2018 & AAAAAAAA & 2222222 \onslide<1-> \\ \hline
+      \onslide<3->2019 & AAAAAA & 222222 \onslide<1-> \\ \hline
+      \onslide<2->2020 & AAAA & 2222 \onslide<1-> \\ \hline
+      2021 & AA & 22 \\ \hline
+      2022 & A & 2 \\ \Hline
+    \end{tabular}
+  \end{center}
 \end{frame}
 
 \begin{frame}{おわり}
