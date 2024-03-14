@@ -12,12 +12,17 @@
 \useinnertheme[shadow=true]{rounded} % 箇条書き等
 \usecolortheme{orchid} % block に色付け
 \usecolortheme{kgu} % Kobe Gakuin University Colors
-\usefonttheme{structurebold} % タイトルを太字にする
+% \usefonttheme{structurebold} % タイトルを太字にする
 % \setbeamerfont{title}{size=\Large,parent=structure}
 
-\setbeamerfont{block title}{size={}}
+% フレームのタイトル
+\setbeamerfont{frametitle}{size=\normalsize}
+\setbeamerfont{frametitle}{series=\bfseries}
+\setbeamercolor{frametitle}{fg=black}
+\addtobeamertemplate{frametitle}{\vspace{-0.45em}}{} % タイトルの位置を調整
 
-\addtobeamertemplate{frametitle}{\vspace{1.0em}}{}  %タイトルを少し下げて，ロゴのスペースを作成
+% \setbeamerfont{block title}{size={}}
+
 
 % フォント
 \newcommand{\bgoth}{\usefont{T1}{phv}{b}{n} \usekanji{JY1}{hgt}{bx}{n}}
