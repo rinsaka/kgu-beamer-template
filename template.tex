@@ -5,32 +5,7 @@
 %  タイプセットコマンド
 %    ptex2pdf -l -ot "-synctex=1 -file-line-error" template.tex
 %
-\usetheme{KGU}
-
-\setbeamertemplate{navigation symbols}{} %% 右下のアイコンを消す
-\usefonttheme[onlymath]{serif}
-% \usefonttheme{professionalfonts}
-
-\usepackage{graphicx}% 画像
-\usepackage{pxjahyper}% しおりの文字化け防止
-\usepackage[deluxe]{otf} %これを入れないとすべてが太字になってしまう
-\usepackage{courier} %texttt で courier フォントが使える
-\usepackage{multirow}% 表で縦方向にセルを結合する
-
-\renewcommand{\kanjifamilydefault}{\gtdefault}% 日本語フォントをゴシックに
-\renewcommand{\familydefault}{\sfdefault} % 本文の欧文フォントをゴシックに
-
-% \renewcommand{\familydefault}{\gtdefault} % 本文の欧文フォントをセリフ体に
-
-\setbeamertemplate{theorems}[numbered]  %% 定理に番号をつける
-\newtheorem{thm}{Theorem}[section]
-\newtheorem{proposition}[thm]{Proposition}
-\theoremstyle{example}
-\newtheorem{exam}[thm]{Example}
-\newtheorem{remark}[thm]{Remark}
-\newtheorem{question}[thm]{Question}
-\newtheorem{prob}[thm]{Problem}
-
+\usetheme{KGU} % スタイルを変更するには beamerthemeKGU.sty を修正する
 
 % フッター (4:3)
 % \setbeamertemplate{footline}
@@ -72,6 +47,7 @@
     \tableofcontents[currentsubsection]
   \end{frame}
 }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title{Beamerプレゼンテーションサンプル}
 \subtitle{サブタイトル}

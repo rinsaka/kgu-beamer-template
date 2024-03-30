@@ -1,13 +1,14 @@
-% Copyright 2007 by Till Tantau
-%
-% This file may be distributed and/or modified
-%
-% 1. under the LaTeX Project Public License and/or
-% 2. under the GNU Public License.
-%
-% See the file doc/licenses/LICENSE for more details.
-
 \mode<presentation>
+
+\usepackage{graphicx}% 画像
+\usepackage{pxjahyper}% しおりの文字化け防止
+\usepackage[deluxe]{otf} %これを入れないとすべてが太字になってしまう
+\usepackage{courier} %texttt で courier フォントが使える
+\usepackage{multirow}% 表で縦方向にセルを結合する
+
+\setbeamertemplate{navigation symbols}{} %% 右下のアイコンを消す
+\usefonttheme[onlymath]{serif}
+% \usefonttheme{professionalfonts}
 
 \useinnertheme[shadow=true]{rounded} % 箇条書き等
 \usecolortheme{orchid} % block に色付け
@@ -17,19 +18,32 @@
 
 % フレームのタイトル
 \setbeamerfont{frametitle}{size=\normalsize}
-\setbeamerfont{frametitle}{series=\bfseries}
-\setbeamercolor{frametitle}{fg=black}
+% \setbeamerfont{frametitle}{series=\bfseries}
+% \setbeamercolor{frametitle}{fg=black}
+\setbeamercolor{frametitle}{fg=black!80!gray}
 \addtobeamertemplate{frametitle}{\vspace{-0.45em}}{} % タイトルの位置を調整
-
 % \setbeamerfont{block title}{size={}}
 
 
 % フォント
+\renewcommand{\kanjifamilydefault}{\gtdefault}% 日本語フォントをゴシックに
+% \renewcommand{\familydefault}{\gtdefault} % 本文の欧文フォントをセリフ体に
+\renewcommand{\familydefault}{\sfdefault} % 本文の欧文フォントをゴシックに
 \newcommand{\bgoth}{\usefont{T1}{phv}{b}{n} \usekanji{JY1}{hgt}{bx}{n}}
 \newcommand{\minc}{\usefont{OT1}{cmr}{m}{n} \usekanji{JY1}{hmc}{m}{n}}
+\setbeamercolor{normal text}{fg=black!60!gray} % デフォルトの文字色をグレーに変更
 
 % 表の太罫線
 \def\Hline{\noalign{\hrule height 0.5truemm}}
+
+\setbeamertemplate{theorems}[numbered]  %% 定理に番号をつける
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{proposition}[thm]{Proposition}
+\theoremstyle{example}
+\newtheorem{exam}[thm]{Example}
+\newtheorem{remark}[thm]{Remark}
+\newtheorem{question}[thm]{Question}
+\newtheorem{prob}[thm]{Problem}
 
 \mode
 <all>
